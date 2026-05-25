@@ -89,6 +89,104 @@
         </section>
       `;
     },
+    event(slide) {
+      return `
+        <section class="slide event-slide">
+          ${topLine(slide)}
+          <div class="event-stage">
+            <div class="event-date">${escapeHtml(slide.date || "")}</div>
+            <h3>${escapeHtml(slide.headline || "")}</h3>
+            <ul>
+              ${(slide.points || []).map((point) => `<li>${escapeHtml(point)}</li>`).join("")}
+            </ul>
+          </div>
+          <div class="number-strip">
+            ${(slide.numbers || [])
+              .map((item) => `<div><strong>${escapeHtml(item[0])}</strong><span>${escapeHtml(item[1])}</span></div>`)
+              .join("")}
+          </div>
+        </section>
+      `;
+    },
+    timeline(slide) {
+      return `
+        <section class="slide timeline-slide">
+          ${topLine(slide)}
+          <p class="body-text">${escapeHtml(slide.subtitle || "")}</p>
+          <div class="timeline-track">
+            ${(slide.milestones || [])
+              .map(
+                (item) => `
+                  <article class="timeline-item">
+                    <span>${escapeHtml(item.label)}</span>
+                    <strong>${escapeHtml(item.value)}</strong>
+                    <p>${escapeHtml(item.text)}</p>
+                  </article>
+                `
+              )
+              .join("")}
+          </div>
+        </section>
+      `;
+    },
+    advantages(slide) {
+      return `
+        <section class="slide advantages-slide">
+          ${topLine(slide)}
+          <div class="advantage-grid">
+            ${(slide.cards || [])
+              .map(
+                (card, index) => `
+                  <article class="advantage-card">
+                    <span>${String(index + 1).padStart(2, "0")}</span>
+                    <h3>${escapeHtml(card.title)}</h3>
+                    <p>${escapeHtml(card.text)}</p>
+                  </article>
+                `
+              )
+              .join("")}
+          </div>
+        </section>
+      `;
+    },
+    conversion(slide) {
+      return `
+        <section class="slide conversion-slide">
+          ${topLine(slide)}
+          <div class="conversion-grid">
+            <pre class="markdown-panel"><code>${escapeHtml((slide.markdown || []).join("\n"))}</code></pre>
+            <div class="rendered-panel">
+              <h3>AI 產出的 HTML 介面</h3>
+              <div class="rendered-table">
+                ${(slide.rendered || [])
+                  .map((row) => `<div><strong>${escapeHtml(row[0])}</strong><span>${escapeHtml(row[1])}</span></div>`)
+                  .join("")}
+              </div>
+            </div>
+          </div>
+        </section>
+      `;
+    },
+    splitDecision(slide) {
+      return `
+        <section class="slide split-decision-slide">
+          ${topLine(slide)}
+          <div class="split-decision-grid">
+            <article>
+              <span>${escapeHtml(slide.left?.label || "")}</span>
+              <h3>${escapeHtml(slide.left?.winner || "")}</h3>
+              <p>${escapeHtml(slide.left?.text || "")}</p>
+            </article>
+            <article>
+              <span>${escapeHtml(slide.right?.label || "")}</span>
+              <h3>${escapeHtml(slide.right?.winner || "")}</h3>
+              <p>${escapeHtml(slide.right?.text || "")}</p>
+            </article>
+          </div>
+          <div class="decision-conclusion">${escapeHtml(slide.conclusion || "")}</div>
+        </section>
+      `;
+    },
     evidence(slide) {
       return `
         <section class="slide evidence-slide">
