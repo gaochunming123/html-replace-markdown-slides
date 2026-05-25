@@ -1,6 +1,6 @@
 window.SLIDE_DECK = {
   title: "HTML 取代 Markdown？",
-  subtitle: "结论先行：Markdown 不会消失，但 HTML 正在接管最终体验",
+  subtitle: "AI 輸出格式的新革命：從線性文字，到可互動的瀏覽器介面",
   author: "你的名字",
   theme: "carbon",
   visuals: {
@@ -15,19 +15,48 @@ window.SLIDE_DECK = {
       type: "impact",
       visual: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=85",
       title: "HTML 取代 Markdown？",
-      subtitle: "不是“谁杀死谁”，而是内容生产链正在分层：Markdown 负责写作速度，HTML 负责最终体验。",
-      stat: "写作用 Markdown，交付用 HTML",
-      kicker: "The Real Shift"
+      subtitle: "AI Agent 不只是產生文字，它正在產生可閱讀、可操作、可分享的介面。",
+      stat: "AI 輸出從文件變成介面",
+      kicker: "2026 · Agent Output Shift"
+    },
+    {
+      type: "event",
+      visualKey: "collaboration",
+      title: "事件起源",
+      date: "2026 年 5 月",
+      headline: "Anthropic / Claude Code 工程社群開始重新討論：AI 的最終輸出，是否應該是 HTML？",
+      points: [
+        "討論核心不是語法偏好，而是人是否真的會讀 AI 產出的長文件。",
+        "HTML 被重新看見，因為它能把長內容變成可視化、可互動、可導航的成果物。",
+        "Markdown 仍然適合草稿、版本控制與資料管線，但不一定適合最終呈現。"
+      ],
+      numbers: [
+        ["AI 產出", "越來越長"],
+        ["人工注意力", "越來越稀缺"],
+        ["交付格式", "走向介面化"]
+      ]
     },
     {
       type: "verdict",
       visualKey: "data",
       title: "一句话判断",
-      verdict: "Markdown 是内容草稿层；HTML 是产品交付层。",
+      verdict: "Markdown 是內容草稿層；HTML 是體驗交付層。",
       points: [
-        "如果目标是快速写、快速改、多人审：Markdown 更强。",
-        "如果目标是展示、互动、品牌、发布：HTML 更强。",
-        "未来不是替代，而是 Markdown → HTML 的流水线。"
+        "要快速寫、快速改、多人審：Markdown 更強。",
+        "要展示、互動、品牌、發布：HTML 更強。",
+        "最佳路徑不是替代，而是 Markdown → HTML 的生產線。"
+      ]
+    },
+    {
+      type: "timeline",
+      visualKey: "data",
+      title: "為什麼以前大家用 Markdown？",
+      subtitle: "早期模型 context window 小，token 很貴；Markdown 的簡潔是硬需求。",
+      milestones: [
+        { label: "早期 LLM", value: "幾 K", text: "必須節省每個 token" },
+        { label: "GPT-4 早期", value: "8K / 32K", text: "Markdown 仍是務實選擇" },
+        { label: "Claude 2 / 3", value: "100K+", text: "長文和規格開始膨脹" },
+        { label: "大 context 時代", value: "百萬級", text: "HTML 的 token 成本不再是唯一瓶頸" }
       ]
     },
     {
@@ -77,6 +106,35 @@ window.SLIDE_DECK = {
       ]
     },
     {
+      type: "advantages",
+      visualKey: "html",
+      title: "HTML 的四大優勢",
+      cards: [
+        { title: "資訊密度", text: "表格、區塊、錨點、圖表可以同頁組織，觀眾不用在長文字裡搜尋重點。" },
+        { title: "視覺豐富度", text: "CSS、圖片、SVG、層級和留白能把內容變成可掃讀的畫面。" },
+        { title: "互動能力", text: "按鈕、篩選、滑桿、文字雲、即時資料都能放進同一份交付物。" },
+        { title: "分享便利性", text: "單一網址或 HTML 檔即可打開，不依賴特定 Markdown 閱讀器。" }
+      ]
+    },
+    {
+      type: "conversion",
+      visualKey: "html",
+      title: "親眼看見：Markdown → HTML",
+      markdown: [
+        "# AI 輸出格式",
+        "- Markdown：易寫、易改、易 diff",
+        "- HTML：可視化、可互動、可發布",
+        "| 場景 | 建議 |",
+        "| 簡報 / 報告 | HTML |"
+      ],
+      rendered: [
+        ["視覺", "HTML 勝"],
+        ["互動", "HTML 勝"],
+        ["版本控制", "Markdown 勝"],
+        ["資料管線", "Markdown 勝"]
+      ]
+    },
+    {
       type: "battle",
       visualKey: "data",
       title: "真正的差异：不是语法，是能力边界",
@@ -94,13 +152,13 @@ window.SLIDE_DECK = {
     {
       type: "matrix",
       visualKey: "collaboration",
-      title: "选择标准",
+      title: "HTML vs Markdown：全面對比",
       rows: [
-        ["个人笔记", "Markdown", "速度优先，结构简单"],
-        ["团队文档", "Markdown → HTML", "源文件协作，网页发布"],
-        ["课程讲义", "Markdown → HTML", "先写内容，再做演示体验"],
-        ["商业简报", "HTML", "视觉、互动、控制感更重要"],
-        ["产品手册", "HTML", "搜索、导航、版本、嵌入组件"]
+        ["視覺設計", "HTML", "CSS、圖片、SVG、排版控制"],
+        ["互動能力", "HTML", "按鈕、滑桿、即時資料、表單"],
+        ["分享展示", "HTML", "瀏覽器即開，適合非技術觀眾"],
+        ["版本控制", "Markdown", "純文字 diff 清楚"],
+        ["資料處理", "Markdown", "適合解析、切片、索引與 RAG"]
       ]
     },
     {
@@ -119,6 +177,29 @@ window.SLIDE_DECK = {
       placeholder: "例如：可以互動、畫面更漂亮、方便部署",
       examples: ["互動", "部署", "品牌感", "版面控制", "視覺化"],
       firebase: true
+    },
+    {
+      type: "quote",
+      visualKey: "html",
+      title: "核心主張",
+      quote: "問題不是 Markdown 寫得不好，而是 AI 產出的內容越來越長，線性文字越來越難被真正消化。",
+      byline: "HTML 的價值，是把 AI 輸出變成可掃讀、可操作、可決策的介面。"
+    },
+    {
+      type: "splitDecision",
+      visualKey: "data",
+      title: "RAG 場景的例外",
+      left: {
+        label: "展示端輸出",
+        winner: "HTML 明顯勝出",
+        text: "適合報告、簡報、儀表板、研究摘要、決策頁。"
+      },
+      right: {
+        label: "資料處理管線",
+        winner: "Markdown 仍有優勢",
+        text: "適合切片、索引、embedding、版本審查和批次轉換。"
+      },
+      conclusion: "HTML 與 Markdown 不是零和競爭；它們處在不同階段。"
     },
     {
       type: "workflow",
@@ -147,8 +228,8 @@ window.SLIDE_DECK = {
       type: "quote",
       visualKey: "html",
       title: "最终结论",
-      quote: "HTML 不会取代 Markdown 的写作价值，但会取代 Markdown 的很多最终展示场景。",
-      byline: "把 Markdown 留在后台，把 HTML 推到前台。"
+      quote: "Markdown 適合寫給系統和作者；HTML 適合交給觀眾和決策者。",
+      byline: "把 Markdown 留在後台，把 HTML 推到前台。"
     },
     {
       type: "evidence",
@@ -176,8 +257,8 @@ window.SLIDE_DECK = {
     {
       type: "closing",
       visualKey: "collaboration",
-      title: "可执行建议",
-      subtitle: "继续用 Markdown 写；把重要内容做成 HTML。尤其是课程、简报、产品手册和对外发布页面。"
+      title: "大 Context 時代",
+      subtitle: "AI Agent 的最佳輸出，不只是答案，而是一個可以被人快速理解、操作和分享的 HTML 介面。"
     }
   ]
 };
